@@ -1,0 +1,102 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{fourier}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green!50!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    breaklines=true,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false
+}
+
+\begin{document}
+\section{Eigenschaften von Algos}
+
+\subsection{Terminierung}
+Algo wird nach endlich vielen Schritten beendet
+
+\subsection{Determiniert}
+Für selben zulässigen Eingabewert stets dasselbe Ergebnis
+
+\subsection{Deterministisch}
+Für Eingabedaten Reihenfolge aller auszuführenden Schritte eindeutig bestimmt
+
+\subsection{Partiell Korrekt}
+es läuft einfach
+
+\subsection{Total Korrekt}
+Partiell korrekt und muss terminieren
+
+\section{Datenrepäsentation}
+\begin{itemize}
+\item Bitwerte: 0, 1
+\item Byte = 8 Bits = 1 Octet, Byte nimmt $2^8=256$
+\end{itemize}
+
+\section{Datentypen}
+\begin{enumerate}
+\item int: 32 Bit
+\item float: 32 Bit
+\item double: 64 Bit
+\item char: 16 Bit
+\end{enumerate}
+
+\section{Laufzeitspeicher}
+\begin{itemize}
+\item Stack für Variablen und Parameter in Methoden
+\item Heap für Werte von Referenzdaten
+\end{itemize}
+
+\section{Sortieralgo}
+\begin{itemize}
+\item InsertionSort: Sortieren wie beim Kartenstapel durch Mensch
+\item Bubblesort: benachbarte Elemente vergleichen
+\end{itemize}
+
+\section{O-Notation}
+\begin{itemize}
+\item $\mathcal{O}(1)$: i<15
+\item $\mathcal{O}(n)$: i<n
+\item $\mathcal{O}(n^2)$: Schleife in einer Schleife, i<n und j<n
+\end{itemize}
+
+\section{Lambda-Ausdruck}
+Parameter -> Anweisung
+
+\section{Exceptions}
+\begin{lstlisting}
+try {
+	irgendne Methode
+} catch (<ExceptionType> e){
+	e.print...
+} finally {
+	fuehre danach aus
+}
+\end{lstlisting}
+
+\section{Assertions}
+Selber mit assert an beliebiger Stelle prüfen, ob Code richtig läuft, wie vorgestellt
+Aktivierung der Überprüfung in Konsole/Terminal
+\begin{lstlisting}
+java -ea ClassFile
+\end{lstlisting}
+
+\end{document}
